@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-public class UserService implements UserDetailsService {
+class UserService implements UserDetailsService {
     @Autowired
     private UserRepository repository;
 

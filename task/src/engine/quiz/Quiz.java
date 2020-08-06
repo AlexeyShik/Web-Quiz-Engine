@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
-public class Quiz {
+class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

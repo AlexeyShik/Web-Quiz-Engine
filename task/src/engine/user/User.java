@@ -1,7 +1,6 @@
 package engine.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import engine.quiz.Solution;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,10 +9,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
 @Entity
 public class User implements UserDetails {
@@ -32,12 +29,7 @@ public class User implements UserDetails {
     @Size(min = 5, message = "Password should have minimal 5 chars")
     private String password;
 
-    @JsonIgnore
-    @OneToMany
-    private List<Solution> solutions;
-
     public User() {
-        solutions = new ArrayList<>();
     }
 
     int getId() {
@@ -54,10 +46,6 @@ public class User implements UserDetails {
 
     public String getUsername() {
         return email;
-    }
-
-    List<Solution> getSolutions() {
-        return solutions;
     }
 
     @Override
@@ -95,9 +83,5 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    void setSolutions(List<Solution> solutions) {
-        this.solutions = solutions;
     }
 }

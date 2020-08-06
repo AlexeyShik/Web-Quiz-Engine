@@ -17,7 +17,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping(path = "/api/quizzes")
-public class QuizController {
+class QuizController {
     @Autowired
     private QuizRepository quizRepository;
 

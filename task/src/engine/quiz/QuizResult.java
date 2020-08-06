@@ -1,6 +1,6 @@
 package engine.quiz;
 
-public class QuizResult {
+class QuizResult {
     public final static QuizResult SUCCESSFUL = new QuizResult(true);
     public final static QuizResult FAILED = new QuizResult(false);
 

@@ -12,7 +12,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping(path = "/api/register")
-public class UserController {
+class UserController {
     @Autowired
     private UserRepository userRepository;
 

@@ -3,7 +3,7 @@ package engine.quiz;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizAnswer {
+class QuizAnswer {
     private List<Integer> answer;
 
     public QuizAnswer() {

@@ -6,6 +6,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SolutionRepository extends PagingAndSortingRepository<Solution, Integer> {
+interface SolutionRepository extends PagingAndSortingRepository<Solution, Integer> {
     Page<Solution> findAllByCompletedBy(String completedBy, Pageable pageable);
 }
